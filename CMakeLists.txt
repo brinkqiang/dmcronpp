@@ -15,24 +15,6 @@ SET(DMCRONPP_VERSION "${DMCRONPP_VERSION_MAJOR}.${DMCRONPP_VERSION_MINOR}.${DMCR
 MESSAGE(STATUS "VERSION: ${DMCRONPP_VERSION}")
 
 OPTION(USE_DMCRONPP "use dmcronpp" OFF)
-CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/include/dmcronpp_config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/include/dmcronpp_config.h)
 
-LibImport("dmcronpp_module" "src/dmcronpp_module")
-ExeImport("test" "dmcronpp_module")
+ExeImport("test" "")
 
-#ADD_CUSTOM_COMMAND(
-#TARGET dmcronpptest
-#PRE_BUILD
-#COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#${CMAKE_CURRENT_SOURCE_DIR}/config/test.csv
-#$<TARGET_FILE_DIR:dmcronpptest>
-#)
-
-#INSTALL(DIRECTORY include/ DESTINATION include)
-#INSTALL(TARGETS dmcronpp
-#        RUNTIME DESTINATION bin
-#        LIBRARY DESTINATION lib
-#        ARCHIVE DESTINATION lib)
-
-#SET(DMCRONPP_LIBS "dmcronpp")
-#MARK_AS_ADVANCED(${DMCRONPP_LIBS})
