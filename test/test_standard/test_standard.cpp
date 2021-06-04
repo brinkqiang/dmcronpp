@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "croncpp.h"
+#include "dmcroncpp.h"
 
 #define ARE_EQUAL(x, y)          REQUIRE(x == y)
 #define CRON_EXPR(x)             make_cron(x)

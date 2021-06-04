@@ -1,5 +1,5 @@
 #include "catch.hpp"
-#include "croncpp.h"
+#include "dmcroncpp.h"
 
 #define ARE_EQUAL(x, y)          REQUIRE(x == y)
 #define CRON_ORCL_EQUAL(x, y)    ARE_EQUAL(make_cron<cron::cron_oracle_traits>(x), make_cron<cron::cron_oracle_traits>(y))
